@@ -1,1 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STARK HOME</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
+    body {
+      margin: 0;
+      padding: 24px;
+      background: #080b12;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      padding: 20px 0;
+      border-bottom: 1px solid #263247;
+    }
+
+    h1 {
+      color: #62a5ff;
+      margin-bottom: 8px;
+    }
+
+    .status {
+      color: #9caac0;
+      font-size: 14px;
+    }
+
+    main {
+      max-width: 700px;
+      margin: 30px auto;
+    }
+
+    .card {
+      background: #111827;
+      border: 1px solid #29364c;
+      border-radius: 16px;
+      padding: 22px;
+      margin-bottom: 18px;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      margin-top: 12px;
+      border: 0;
+      border-radius: 10px;
+      background: #2563eb;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    #mensagem {
+      color: #a9caff;
+      margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>STARK HOME</h1>
+    <div class="status">Sistema iniciado</div>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Painel principal</h2>
+      <p>Bem-vindo ao seu ambiente STARK.</p>
+      <button onclick="mostrarMensagem()">
+        Testar sistema
+      </button>
+      <p id="mensagem">Sistema aguardando comando.</p>
+    </section>
+
+    <section class="card">
+      <h2>Dispositivos</h2>
+      <p>Nenhum dispositivo conectado.</p>
+    </section>
+  </main>
+
+  <script>
+    function mostrarMensagem() {
+      document.getElementById("mensagem").textContent =
+        "STARK HOME funcionando!";
+    }
+  </script>
+</body>
+</html>
